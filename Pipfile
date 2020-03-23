@@ -13,6 +13,8 @@ django-widget-tweaks = "*"
 pillow = "*"
 sorl-thumbnail = "*"
 django-crispy-forms = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.8"
