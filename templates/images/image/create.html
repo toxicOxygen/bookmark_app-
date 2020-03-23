@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block extra_headers %}
+    <style>
+        .my-img{
+            width:100%;
+            height: auto;
+        }
+    </style>
+{% endblock extra_headers %}
+
+
+{% block content %}
+    <h1>Bookmark an image</h1>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-5 col-sm-12">
+            <img src="{{ request.GET.url }}" class="my-img"/>
+        </div>
+        <div class="col-md-7 col-sm-12">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Title</label>
+                    {% render_field form.title class+="form-control" %}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Description</label>
+                    {% render_field form.description class+="form-control" rows="6" %}
+                </div>
+                {{form.url}}
+                <button type="submit" class="btn btn-success">Bookmark it!</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
