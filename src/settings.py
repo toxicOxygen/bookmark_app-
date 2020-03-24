@@ -23,6 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 SECRET_KEY = os.environ.get('APP_KEY')
+#'^kt90rnkkf)z#0(-g)4tar=@@2a+9_n0smv@wat&=!o-=(u0=f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -163,12 +164,12 @@ ACCOUNT_UNIQUE_EMAIL = True
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'account_login'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER = os.environ.get('SENDGRID_KEY')
-# EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'gasmillasuarez@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get('APP_PASS') #'uksoiwcaeargewci'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 django_heroku.settings(locals())
