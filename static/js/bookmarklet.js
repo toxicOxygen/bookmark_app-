@@ -89,7 +89,6 @@
                 i.src = image.src;
                 imgs_container.appendChild(i);
                 i.addEventListener('click',e=>{
-                    //var site_url = `http://127.0.0.1:8000/images/create/?title=hello&url=${i.src}`;
                     var site_url = `https://bookmark-app-kkb.herokuapp.com/images/create/?title=hello&url=${i.src}`;
                     window.open(site_url);
                 })
