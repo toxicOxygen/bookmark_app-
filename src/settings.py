@@ -26,9 +26,9 @@ SECRET_KEY = os.environ.get('APP_KEY')
 #'^kt90rnkkf)z#0(-g)4tar=@@2a+9_n0smv@wat&=!o-=(u0=f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
